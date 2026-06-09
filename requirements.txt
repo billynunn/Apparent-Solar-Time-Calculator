@@ -1,3 +1,3 @@
-numpy
-pgeocode
-streamlit
+numpy as np
+pgeocode as pg
+streamlit as st
