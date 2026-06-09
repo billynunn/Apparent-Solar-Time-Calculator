@@ -1,14 +1,18 @@
+import streamlit as st
+import numpy as np
+import pgeocode as pg
+
 def calculate_ast(postcode):
     now = time.gmtime(time.time())
     lth = now.tm_hour + now.tm_min / 60 + now.tm_sec / 3600    
     n = now.tm_yday
     
-    nomi = pgeocode.Nominatim('gb')
+    nomi = pg.Nominatim('gb')
     result = nomi.query_postal_code(postcode)
     long = result.longitude
     
-    B = numpy.radians((360 / 364) * (n - 81))
-    eot = 9.87 * numpy.sin(2 * B) - 7.53 * numpy.cos(B) - 1.5 * numpy.sin(B)
+    B = np.radians((360 / 364) * (n - 81))
+    eot = 9.87 * np.sin(2 * B) - 7.53 * np.cos(B) - 1.5 * np.sin(B)
     
     long_cor = 4 * long
     ast = (lth + eot/60 + long_cor/60) % 24
@@ -18,8 +22,8 @@ def calculate_ast(postcode):
     seconds = int((((ast - hours) * 60) - minutes) * 60)
     return(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
 
-streamlit.title("Apparent Solar Time Calculator")
-postcode = streamlit.text_input("Please enter a UK postcode")
-if streamlit.button ("Calculate"):
+st.title("Apparent Solar Time Calculator")
+postcode = st.text_input("Please enter a UK postcode")
+if st.button ("Calculate"):
     result = calculate_ast(postcode)
-    streamlit.success(f"The Apparent Solar Time is {result}")
+    st.success(f"The Apparent Solar Time is {result}")
