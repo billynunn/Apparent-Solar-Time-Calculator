@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pgeocode as pg
+import time
 
 def calculate_ast(postcode):
     now = time.gmtime(time.time())
