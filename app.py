@@ -18,8 +18,8 @@ def calculate_ast(postcode):
     seconds = int((((ast - hours) * 60) - minutes) * 60)
     return(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
 
-st.title("Apparent Solar Time Calculator")
-postcode = st.text_input("Please enter a UK postcode")
-if st.button ("Calculate"):
+streamlit.title("Apparent Solar Time Calculator")
+postcode = streamlit.text_input("Please enter a UK postcode")
+if streamlit.button ("Calculate"):
     result = calculate_ast(postcode)
-    st.success(f"The Apparent Solar Time is {result}")
+    streamlit.success(f"The Apparent Solar Time is {result}")
