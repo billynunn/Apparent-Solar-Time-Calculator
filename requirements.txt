@@ -1,3 +1,3 @@
-import numpy as np
-import pgeocode as pg
-import streamlit as st
+numpy
+pgeocode
+streamlit
