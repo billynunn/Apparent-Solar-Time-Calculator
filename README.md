@@ -4,15 +4,14 @@
 
 ASTC corrects the local standard time (LST) from a given postcode, with coverage across (almost) all of the UK. Apparent solar time is calculated by adjusting LST using the eqaution of time and a longtiude correction. 
 
-# Installation, usage 
-Unless you are using the function in Python, there is no need to use 
+## Testing & Usage 
+<img width="1280" height="640" alt="Apparent Solar Time Calculator-4" src="https://github.com/user-attachments/assets/32f575b1-aea2-4265-aba9-b38ace5efa0f" />
+
+Those interested in testing the calculator can visit [ASTC](https://ast-calculator.streamlit.app/); and, (i) enter a UK postcode (either the first three digits or the full postcode); (ii) click the 'Calculate' button to run the function; and (iii) receive an output representing the AST.
+
+Alternatively, if you would like to use and adapt the code in Python, you can use the code in
 
 
 
-https://ast-calculator.streamlit.app/ 
 
-# Comparison to other sites
-
-
-
-# About
+## About
