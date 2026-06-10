@@ -4,7 +4,7 @@
 
 ASTC corrects the local standard time (LST) from a given postcode, with coverage across (almost) all of the UK. Apparent solar time is calculated by adjusting LST using the eqaution of time and a longtiude correction. 
 
-# Function usage 
+# Installation, usage 
 Unless you are using the function in Python, there is no need to use 
 
 
